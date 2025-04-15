@@ -98,7 +98,7 @@ namespace OOOPlayerok.View
         {
             try
             {
-                //подгрузка изображения из bin/Debug/Resources
+                //подгрузка изображения из bin/Debug/Resources по абсолютному пути
                 string imagePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"Resources/{gameId}.jpg");
                 return new BitmapImage(new Uri(imagePath));
                 //Uri resourceUri = new Uri($"/Resources/{gameId}.jpg", UriKind.Relative);
