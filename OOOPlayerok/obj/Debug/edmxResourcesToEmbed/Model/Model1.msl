@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище gamesModelContainer" CdmEntityContainer="gamesEntities">
+    <EntitySetMapping Name="Developer">
+      <EntityTypeMapping TypeName="gamesModel.Developer">
+        <MappingFragment StoreEntitySet="Developer">
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="DeveloperName" ColumnName="DeveloperName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game">
+      <EntityTypeMapping TypeName="gamesModel.Game">
+        <MappingFragment StoreEntitySet="Game">
+          <ScalarProperty Name="GameDiscount" ColumnName="GameDiscount" />
+          <ScalarProperty Name="GameId" ColumnName="GameId" />
+          <ScalarProperty Name="GameTitle" ColumnName="GameTitle" />
+          <ScalarProperty Name="GenreId" ColumnName="GenreId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="GameDescription" ColumnName="GameDescription" />
+          <ScalarProperty Name="GamePrice" ColumnName="GamePrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genre">
+      <EntityTypeMapping TypeName="gamesModel.Genre">
+        <MappingFragment StoreEntitySet="Genre">
+          <ScalarProperty Name="GenreId" ColumnName="GenreId" />
+          <ScalarProperty Name="GenreName" ColumnName="GenreName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

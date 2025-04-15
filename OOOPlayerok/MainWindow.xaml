@@ -1,0 +1,36 @@
+﻿<Window x:Class="OOOPlayerok.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOOPlayerok"
+        mc:Ignorable="d"
+        Title="Главное окно" Height="450" Width="800" MinWidth="450" MinHeight="800">
+    <Grid>
+        <!--главный макет-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="191*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <!--Заголовок-->
+        <Grid Grid.Row="0" Background="#FF3C91E6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Margin="5" Source="/Resources/gamesLogo.png"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Главная страница" VerticalAlignment="Center" FontSize="16" FontWeight="DemiBold" />
+            <Button Name="btnExit"  Grid.Column="2" Content="Выход" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="14" FontWeight="DemiBold" Background="#FFA2D729" Margin="5" Click="btnExit_Click"/>
+
+        </Grid>
+        <!--центр часть-->
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button  Name="toCatalog" Content="Перейти в каталог" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="DemiBold" Background="#FFA2D729"  Click="toCatalog_Click" />
+        </Grid>
+    </Grid>
+</Window>

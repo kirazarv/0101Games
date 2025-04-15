@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище gamesModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Developer">
+          <Key>
+            <PropertyRef Name="DeveloperId" />
+          </Key>
+          <Property Name="DeveloperId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DeveloperName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Game">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GameTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="GenreId" Type="int" Nullable="false" />
+          <Property Name="DeveloperId" Type="int" Nullable="false" />
+          <Property Name="GameDescription" Type="nvarchar" MaxLength="200" />
+          <Property Name="GamePrice" Type="float" Nullable="false" />
+          <Property Name="GameDiscount" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="GenreId" />
+          </Key>
+          <Property Name="GenreId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GenreName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Game_Developer">
+          <End Role="Developer" Type="Self.Developer" Multiplicity="1" />
+          <End Role="Game" Type="Self.Game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Developer">
+              <PropertyRef Name="DeveloperId" />
+            </Principal>
+            <Dependent Role="Game">
+              <PropertyRef Name="DeveloperId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Game_Genre">
+          <End Role="Genre" Type="Self.Genre" Multiplicity="1" />
+          <End Role="Game" Type="Self.Game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Genre">
+              <PropertyRef Name="GenreId" />
+            </Principal>
+            <Dependent Role="Game">
+              <PropertyRef Name="GenreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище gamesModelContainer">
+          <EntitySet Name="Developer" EntityType="Self.Developer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Genre" EntityType="Self.Genre" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Game_Developer" Association="Self.FK_Game_Developer">
+            <End Role="Developer" EntitySet="Developer" />
+            <End Role="Game" EntitySet="Game" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Game_Genre" Association="Self.FK_Game_Genre">
+            <End Role="Genre" EntitySet="Genre" />
+            <End Role="Game" EntitySet="Game" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="gamesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Developer">
+          <Key>
+            <PropertyRef Name="DeveloperId" />
+          </Key>
+          <Property Name="DeveloperId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DeveloperName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Game" Relationship="Self.FK_Game_Developer" FromRole="Developer" ToRole="Game" />
+        </EntityType>
+        <EntityType Name="Game">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GameTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GenreId" Type="Int32" Nullable="false" />
+          <Property Name="DeveloperId" Type="Int32" Nullable="false" />
+          <Property Name="GameDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="GamePrice" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Developer" Relationship="Self.FK_Game_Developer" FromRole="Game" ToRole="Developer" />
+          <NavigationProperty Name="Genre" Relationship="Self.FK_Game_Genre" FromRole="Game" ToRole="Genre" />
+          <Property Name="GameDiscount" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="GenreId" />
+          </Key>
+          <Property Name="GenreId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GenreName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Game" Relationship="Self.FK_Game_Genre" FromRole="Genre" ToRole="Game" />
+        </EntityType>
+        <Association Name="FK_Game_Developer">
+          <End Role="Developer" Type="Self.Developer" Multiplicity="1" />
+          <End Role="Game" Type="Self.Game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Developer">
+              <PropertyRef Name="DeveloperId" />
+            </Principal>
+            <Dependent Role="Game">
+              <PropertyRef Name="DeveloperId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Game_Genre">
+          <End Role="Genre" Type="Self.Genre" Multiplicity="1" />
+          <End Role="Game" Type="Self.Game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Genre">
+              <PropertyRef Name="GenreId" />
+            </Principal>
+            <Dependent Role="Game">
+              <PropertyRef Name="GenreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="gamesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Developer" EntityType="Self.Developer" />
+          <EntitySet Name="Game" EntityType="Self.Game" />
+          <EntitySet Name="Genre" EntityType="Self.Genre" />
+          <AssociationSet Name="FK_Game_Developer" Association="Self.FK_Game_Developer">
+            <End Role="Developer" EntitySet="Developer" />
+            <End Role="Game" EntitySet="Game" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Game_Genre" Association="Self.FK_Game_Genre">
+            <End Role="Genre" EntitySet="Genre" />
+            <End Role="Game" EntitySet="Game" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище gamesModelContainer" CdmEntityContainer="gamesEntities">
+          <EntitySetMapping Name="Developer">
+            <EntityTypeMapping TypeName="gamesModel.Developer">
+              <MappingFragment StoreEntitySet="Developer">
+                <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+                <ScalarProperty Name="DeveloperName" ColumnName="DeveloperName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Game">
+            <EntityTypeMapping TypeName="gamesModel.Game">
+              <MappingFragment StoreEntitySet="Game">
+                <ScalarProperty Name="GameDiscount" ColumnName="GameDiscount" />
+                <ScalarProperty Name="GameId" ColumnName="GameId" />
+                <ScalarProperty Name="GameTitle" ColumnName="GameTitle" />
+                <ScalarProperty Name="GenreId" ColumnName="GenreId" />
+                <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+                <ScalarProperty Name="GameDescription" ColumnName="GameDescription" />
+                <ScalarProperty Name="GamePrice" ColumnName="GamePrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Genre">
+            <EntityTypeMapping TypeName="gamesModel.Genre">
+              <MappingFragment StoreEntitySet="Genre">
+                <ScalarProperty Name="GenreId" ColumnName="GenreId" />
+                <ScalarProperty Name="GenreName" ColumnName="GenreName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

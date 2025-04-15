@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище gamesModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Developer">
+    <Key>
+      <PropertyRef Name="DeveloperId" />
+    </Key>
+    <Property Name="DeveloperId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeveloperName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="GameId" />
+    </Key>
+    <Property Name="GameId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GameTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GenreId" Type="int" Nullable="false" />
+    <Property Name="DeveloperId" Type="int" Nullable="false" />
+    <Property Name="GameDescription" Type="nvarchar" MaxLength="200" />
+    <Property Name="GamePrice" Type="float" Nullable="false" />
+    <Property Name="GameDiscount" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Genre">
+    <Key>
+      <PropertyRef Name="GenreId" />
+    </Key>
+    <Property Name="GenreId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GenreName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Game_Developer">
+    <End Role="Developer" Type="Self.Developer" Multiplicity="1" />
+    <End Role="Game" Type="Self.Game" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Developer">
+        <PropertyRef Name="DeveloperId" />
+      </Principal>
+      <Dependent Role="Game">
+        <PropertyRef Name="DeveloperId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_Genre">
+    <End Role="Genre" Type="Self.Genre" Multiplicity="1" />
+    <End Role="Game" Type="Self.Game" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genre">
+        <PropertyRef Name="GenreId" />
+      </Principal>
+      <Dependent Role="Game">
+        <PropertyRef Name="GenreId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище gamesModelContainer">
+    <EntitySet Name="Developer" EntityType="Self.Developer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Genre" EntityType="Self.Genre" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Game_Developer" Association="Self.FK_Game_Developer">
+      <End Role="Developer" EntitySet="Developer" />
+      <End Role="Game" EntitySet="Game" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_Genre" Association="Self.FK_Game_Genre">
+      <End Role="Genre" EntitySet="Genre" />
+      <End Role="Game" EntitySet="Game" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

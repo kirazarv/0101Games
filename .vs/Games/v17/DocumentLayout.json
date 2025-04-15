@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u0411\u0438\u043B\u0435\u0442\u044B01.01\\Games\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{24EB070B-92E0-46E9-A506-6D4E84FDBB05}|Games\\Games.csproj|d:\\\u0431\u0438\u043B\u0435\u0442\u044B01.01\\games\\games\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{24EB070B-92E0-46E9-A506-6D4E84FDBB05}|Games\\Games.csproj|solutionrelative:games\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24EB070B-92E0-46E9-A506-6D4E84FDBB05}|Games\\Games.csproj|d:\\\u0431\u0438\u043B\u0435\u0442\u044B01.01\\games\\games\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24EB070B-92E0-46E9-A506-6D4E84FDBB05}|Games\\Games.csproj|solutionrelative:games\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24EB070B-92E0-46E9-A506-6D4E84FDBB05}|Games\\Games.csproj|d:\\\u0431\u0438\u043B\u0435\u0442\u044B01.01\\games\\games\\formaddgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{24EB070B-92E0-46E9-A506-6D4E84FDBB05}|Games\\Games.csproj|solutionrelative:games\\formaddgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24EB070B-92E0-46E9-A506-6D4E84FDBB05}|Games\\Games.csproj|d:\\\u0431\u0438\u043B\u0435\u0442\u044B01.01\\games\\games\\class\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24EB070B-92E0-46E9-A506-6D4E84FDBB05}|Games\\Games.csproj|solutionrelative:games\\class\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24EB070B-92E0-46E9-A506-6D4E84FDBB05}|Games\\Games.csproj|d:\\\u0431\u0438\u043B\u0435\u0442\u044B01.01\\games\\games\\formaddgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24EB070B-92E0-46E9-A506-6D4E84FDBB05}|Games\\Games.csproj|solutionrelative:games\\formaddgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 157,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormAddGame.cs",
+              "DocumentMoniker": "D:\\\u0411\u0438\u043B\u0435\u0442\u044B01.01\\Games\\Games\\FormAddGame.cs",
+              "RelativeDocumentMoniker": "Games\\FormAddGame.cs",
+              "ToolTip": "D:\\\u0411\u0438\u043B\u0435\u0442\u044B01.01\\Games\\Games\\FormAddGame.cs",
+              "RelativeToolTip": "Games\\FormAddGame.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAswDYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T17:58:18.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormAddGame.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\\u0411\u0438\u043B\u0435\u0442\u044B01.01\\Games\\Games\\FormAddGame.cs",
+              "RelativeDocumentMoniker": "Games\\FormAddGame.cs",
+              "ToolTip": "D:\\\u0411\u0438\u043B\u0435\u0442\u044B01.01\\Games\\Games\\FormAddGame.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Games\\FormAddGame.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T17:53:44.961Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "D:\\\u0411\u0438\u043B\u0435\u0442\u044B01.01\\Games\\Games\\Class\\Helper.cs",
+              "RelativeDocumentMoniker": "Games\\Class\\Helper.cs",
+              "ToolTip": "D:\\\u0411\u0438\u043B\u0435\u0442\u044B01.01\\Games\\Games\\Class\\Helper.cs",
+              "RelativeToolTip": "Games\\Class\\Helper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T16:06:13.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\\u0411\u0438\u043B\u0435\u0442\u044B01.01\\Games\\Games\\Form1.cs",
+              "RelativeDocumentMoniker": "Games\\Form1.cs",
+              "ToolTip": "D:\\\u0411\u0438\u043B\u0435\u0442\u044B01.01\\Games\\Games\\Form1.cs",
+              "RelativeToolTip": "Games\\Form1.cs",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAswIwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T15:46:47.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\\u0411\u0438\u043B\u0435\u0442\u044B01.01\\Games\\Games\\Form1.cs",
+              "RelativeDocumentMoniker": "Games\\Form1.cs",
+              "ToolTip": "D:\\\u0411\u0438\u043B\u0435\u0442\u044B01.01\\Games\\Games\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Games\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T14:18:41.812Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
